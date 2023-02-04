@@ -52,24 +52,26 @@ public class Main {
                         }
 
                     }
-                }}
-                if (number == 3) {
-                    System.out.println("Введите текст для поиска:");
-                    String query = scanner.nextLine();
-                 String queryLower = query.toLowerCase();
-                    System.out.println("Найдено: ");
-                    for (int i = 0; i < list.size(); i++) {
-
-                       String itemLower = list.get(i).toLowerCase();
-                       if(itemLower.contains(queryLower)){
-
-                        System.out.println(i +1 + " " + list.get(i));
-                    }}
-
                 }
             }
+            if (number == 3) {
+                System.out.println("Введите текст для поиска:");
+                String query = scanner.nextLine();
+                String queryLower = query.toLowerCase();
+                System.out.println("Найдено: ");
+                for (int i = 0; i < list.size(); i++) {
 
+                    String itemLower = list.get(i).toLowerCase();
+                    if (itemLower.contains(queryLower)) {
+
+                        System.out.println(i + 1 + " " + list.get(i));
+                    }
+                }
+
+            }
         }
 
     }
+
+}
 
